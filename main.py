@@ -1,4 +1,5 @@
 from flask import Flask ,render_template ,request,redirect,url_for,session
+from urllib.parse import quote as url_quote
 import pandas as pd
 import numpy as np
 from sklearn.neighbors import NearestNeighbors
