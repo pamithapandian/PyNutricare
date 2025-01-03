@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 400px; /* Set the width */
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button {
+            width: 120px;
+            height: 50px;
+            background-color: #7D0552;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 10px;
+            text-decoration: none; /* Remove default underline for links */
+            display: inline-block; /* Make the buttons display inline */
+            line-height: 50px; /* Center the text vertically */
+        }
+        .button:last-child {
+            margin-bottom: 0;
+            }
+        .button:hover {
+            background-color: #689f38;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, Admin</h1>
+        <div class="button-container">
+            <a href="{{ url_for('admin_upackage')}}" class="button">Package</a>
+        </div>
+        <div class="button-container">
+            <a href="{{ url_for('admin_users')}}" class="button">Users</a>
+        </div>
+        <div class="button-container">
+            <a href="{{ url_for('admin_udetails')}}" class="button">users Details</a>
+        </div>
+        <div class="button-container">
+            <a href="{{ url_for('ad_fooddetails')}}" class="button">Food Details</a>
+        </div>
+        <div class="button-container">
+            <a href="{{ url_for('ad_foodlogs')}}" class="button">Daily status</a>
+        </div>
+    </div>
+</body>
+</html>

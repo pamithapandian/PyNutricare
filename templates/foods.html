@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Nutrition Management</title>
+    <link rel="stylesheet" type="text/css" href="static/food.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 600px; /* Adjust as needed */
+        }
+
+        form {
+            text-align: center;
+        }
+
+        label {
+            font-size: 24px; /* Adjust as needed */
+            font-weight: bold;
+            color: black; /* Adjust as needed */
+        }
+
+        input[type="date"] {
+            padding: 15px;
+            font-size: 20px; /* Adjust as needed */
+            margin-top: 20px; /* Adjust as needed */
+            width: 100%; /* Adjust as needed */
+            box-sizing: border-box; /* Adjust as needed */
+        }
+
+        input[type="submit"] {
+            margin-top: 30px; /* Adjust as needed */
+            padding: 15px 30px;
+            font-size: 20px; /* Adjust as needed */
+            background-color: #7D0552;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form method="POST" action="/display_recipes">
+            <h1 class="animate__animated animate__bounceInDown">Enter Date</h1> <!-- Example of animated text -->
+            <input type="date" name="date" required><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
+

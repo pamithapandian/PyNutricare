@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Tracking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: grey;
+            color: #000; /* Set text color to black */
+        }
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .container {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="text"], input[type="number"] {
+            padding: 8px;
+            margin: 5px;
+            width: calc(100% - 10px);
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        .food-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Food Tracking</h1>
+    </header>
+    <div class="container">
+        <div class="form-container">
+            <h2>Add Food</h2>
+            <form action="/log_details" method="POST">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username" required><br>
+
+                <label for="log-date">Log Date:</label><br>
+                <input type="date" id="log_date" name="log_date" required><br>
+
+                <div id="food-inputs">
+                    <div class="food-item">
+                        <label for="food-name">Food Name:</label><br>
+                        <input type="text" class="food_name" name="food_name[]" required><br>
+
+                        <label for="calories">Calories:</label><br>
+                        <input type="number" class="calories" name="calories[]" required><br>
+                    </div>
+                </div>
+
+                <button type="button" id="add-food">Add Food</button>
+                <input type="submit" value="Save">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("add-food").addEventListener("click", function() {
+            var foodInputs = document.getElementById("food-inputs");
+            var newFoodItem = document.createElement("div");
+            newFoodItem.classList.add("food-item");
+            newFoodItem.innerHTML = `
+                <label for="food-name">Food Name:</label><br>
+                <input type="text" class="food-name" name="food_name[]" required><br>
+
+                <label for="calories">Calories:</label><br>
+                <input type="number" class="calories" name="calories[]" required><br>
+            `;
+            foodInputs.appendChild(newFoodItem);
+        });
+    </script>
+</body>
+</html>

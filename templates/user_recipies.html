@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            color:black
+        }
+        th {
+            background-color:  lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Recipes list{{ date }}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Calories</th>
+                <th>Carbs</th>
+                <th>Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for recipe in recipes %}
+                <tr>
+                    <td>{{ recipe[2] }}</td>
+                    <td>{{ recipe[3] }}</td>
+                    <td>{{ recipe[4] }}</td>
+                    <td>{{ recipe[5] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

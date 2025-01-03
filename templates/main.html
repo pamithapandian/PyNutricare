@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>Nutrition Management</title>
+	<link rel="stylesheet" type="text/css" href="static/food.css">
+	<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<nav>
+	<div class="logo">PyNutriCare</div>
+	<div class="menu">
+		<a href="#">Home</a>
+		<a href="{{url_for('package')}}">Package</a>
+		<a href="{{url_for('dash')}}">Food Tracking</a>
+		<a href="{{url_for('diet')}}">Profile Details</a>
+		<a href="{{url_for('foods')}}">My recipes</a>
+		<a href="{{url_for('bmi')}}">Bmi</a>
+		<a href="{{url_for('my_foodlog')}}">My Food logs</a>
+	</div>
+</nav>
+<div class="plate animate__animated animate__ZoomIn animate__delay-1s">
+	<img src="static/image.png" data-tilt>>
+</div>
+<div class="text animate__animated animate__ZoomIn animate__delay-1s">
+	<h1>Stay fit</h1>
+	<h1>Eat Healthy</h1>
+</div>
+
+<div class="first animate__animated animate__slideInDown"></div>
+<div class="second animate__animated animate__ZoomIn"></div>
+<div class="third animate__animated animate__slideInUp"></div>
+
+
+<script src="static/tilt.jquery.min.js"></script>
+</body>
+
+</html>
