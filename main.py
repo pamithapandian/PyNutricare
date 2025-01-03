@@ -118,7 +118,7 @@ def package1():
     return render_template('login.html')
 
 
-data = pd.read_csv(r'C:\PAMITHA\project\pynuticare\static\Calories.csv')
+data = pd.read_csv(r'static/Calories.csv')
 
 
 def calculate_bmr(age, height, weight, gender):
